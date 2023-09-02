@@ -1,5 +1,5 @@
 import express, { json } from "express";
-import { emailSendRouter } from "./routes/EmailSend.js";
+import { emailSendRouter } from "./routes/emailSend.js";
 import { corsMiddleware } from "./middleware/cors.js";
 
 const app = express();
