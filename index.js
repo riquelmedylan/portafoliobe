@@ -1,5 +1,5 @@
 import express, { json } from "express";
-import { EmailSendRouter } from "./routes/emailSend.js";
+import { emailSendRouter } from "./routes/emailSend.js";
 import { corsMiddleware } from "./middleware/cors.js";
 
 const app = express();
@@ -7,7 +7,7 @@ app.use(json());
 app.disable("x-powered-by");
 app.use(corsMiddleware());
 app.use(express.urlencoded( { extended: false } )); 
-app.use("/send-email", EmailSendRouter);
+app.use("/send-email", emailSendRouter);
 
 const PORT = process.env.PORT ?? 4245;
 
