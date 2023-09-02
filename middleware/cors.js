@@ -5,7 +5,7 @@ export const corsMiddleware = () =>
     origin: (origin, cb) => {
       const ACCEPTED_ORIGINS = [
         "http://localhost:5173",
-        "https://portafolio-rd.vercel.app/",
+        "https://portafolio-rd.vercel.app",
       ];
       if (ACCEPTED_ORIGINS.includes(origin) || !origin) {
         return cb(null, true);
